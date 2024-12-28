@@ -1,0 +1,19 @@
+/* Conteneur principal pour toute la page */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* La page occupe toute la hauteur de la fenêtre */
+}
+
+/* Contenu principal pour occuper l'espace restant */
+.content {
+    flex: 1; /* Permet au contenu principal de remplir l'espace restant */
+}
+
+/* Footer collé au bas */
+.footer {
+    background-color: var(--very-dark-color);
+    color: var(--bright-color);
+    text-align: center;
+    padding: 10px 20px;
+}

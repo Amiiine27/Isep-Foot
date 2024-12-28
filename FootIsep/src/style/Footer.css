@@ -1,0 +1,7 @@
+/* Footer.css */
+.footer {
+    background-color: var(--very-dark-color);
+    color: var(--bright-color);
+    text-align: center;
+    padding: 10px 20px;
+}

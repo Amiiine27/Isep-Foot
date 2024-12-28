@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --bright-color: #d9eddf;
+    --dark-color: #075137;
+    --very-dark-color: #274037;
+    --light-color: #00cd8e;
+    --other-color: #386c5f;
+}
+
+@font-face {
+    font-family: Elaine;
+    src: url("src/assets/ElaineKinandhita.ttf");
+}
+
+body {
+    font-family: Elaine, sans-serif; /* Elaine en priorité, avec une police de secours */
+}

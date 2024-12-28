@@ -1,0 +1,41 @@
+
+
+.header{
+    background-color: #075137;
+    color: var(--bright-color);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px 10px 20px;
+}
+
+.header img{
+    width: 80px;
+}
+
+.links{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.account{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 3px 5px 3px 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--bright-color);
+}
+
+.account:hover{
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.account img{
+    border-radius: 50%;
+    width: 65px;
+}
+
