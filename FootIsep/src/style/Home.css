@@ -1,0 +1,77 @@
+.home{
+    margin: 15px;
+}
+
+.next-match{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    font-size: 1.5rem;
+}
+
+.match-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home .sides{
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.match-title{
+    display: flex;
+    gap: 10px;
+}
+
+.home .title{
+    font-size: 2.5rem;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.location-image{
+    width: 600px;
+    height: 400px;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.compo{
+    background-image: url("../assets/field.jpg");
+    background-size: cover; /* Affiche l'image entière */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-position: center; /* Centre l'image dans le conteneur */
+    width: 600px;
+    height: 400px;
+    cursor: pointer;
+}
+
+.compo:active {
+    transform: scale(0.995); /* Réduit légèrement l'élément */
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*
+A faire : 
+
+- le responsive
+- rajouter des onglets
+- changer la taille de voir les compos
+
+*/

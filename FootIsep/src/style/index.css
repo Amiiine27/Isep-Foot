@@ -18,6 +18,16 @@
     src: url("src/assets/ElaineKinandhita.ttf");
 }
 
+
+@font-face {
+    font-family: Aku;
+    src: url("src/assets/Aku.otf");
+}
+
 body {
     font-family: Elaine, sans-serif; /* Elaine en priorité, avec une police de secours */
+}
+
+.Aku{
+    font-family: Aku;
 }

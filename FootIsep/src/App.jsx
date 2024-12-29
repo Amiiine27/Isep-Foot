@@ -5,6 +5,7 @@ import MonCompte from './components/MonCompte';
 import Home from './components/Home';
 import Footer from './components/Footer'
 import "./style/App.css"
+import Match from './components/Match';
 
 function App() {
     return (
@@ -16,6 +17,8 @@ function App() {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/mon-compte" element={<MonCompte />} />
+                        <Route path="/match" element={<Match />} />
+                        
                     </Routes>
                 </div>
                 <Footer />
