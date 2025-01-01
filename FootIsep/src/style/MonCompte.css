@@ -1,5 +1,6 @@
     .monCompte {
-        margin: 30px;
+        margin: 50px 100px 0 100px;
+        display: flex;
     }
 
     .name {
@@ -40,7 +41,8 @@
 
     .profile-pic::after {
         content: 'Changer de photo';
-        color: #fff;
+        font-size: 1.5rem;
+        color: var(--bright-color);
         display: flex; /* Utilisation de Flexbox */
         align-items: center; /* Centre verticalement */
         justify-content: center; /* Centre horizontalement */
@@ -50,7 +52,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(128, 128, 128, 0.5); /* Couche grise semi-transparente */
+        background: rgba(0, 0, 0, 0.7); /* Couche grise semi-transparente */
         opacity: 0; /* Invisible par défaut */
         transition: opacity 0.3s ease; /* Transition fluide */
         z-index: 1; /* Couche grise au-dessus de l'image mais sous l'input invisible */
@@ -77,13 +79,15 @@
 
     /* Boutons */
     .crop-button {
-        width: 120px; /* Taille fixe pour chaque bouton */
-        height: 40px;
-        background-color: #007bff;
-        color: #fff;
+        width: 250px; /* Taille fixe pour chaque bouton */
+        margin-top: 3px;
+        height: 50px;
+        background-color: var(--light-color);
+        color: var(--bright-color);
         border: none;
         border-radius: 5px;
-        font-size: 1rem;
+        font-size: 1.2rem;
+        font-style: bold;
         cursor: pointer;
         text-align: center;
         transition: background 0.3s ease;
@@ -91,7 +95,7 @@
     }
 
     .crop-button:hover {
-        background-color: #0056b3;
+        background-color: var(--other-color);
     }
 
     /* Bouton Annuler */
@@ -103,4 +107,22 @@
         background-color: #a71d2a;
     }
 
-    
+
+.profile-pic-section{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+.fields{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    margin-left: 150px;
+    height: 303px;
+}

@@ -1,0 +1,14 @@
+.label-value{
+    font-size: 1.25rem;
+}
+
+.text-value{
+    border: 1px solid #000;
+    min-width: 200px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 1.75rem;
+    background-color: rgb(0, 0, 0, 0.1);
+    padding: 15px;
+}

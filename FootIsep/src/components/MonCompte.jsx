@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Cropper from 'react-easy-crop';
 import pp from './../assets/toji.jpg';
 import './../style/MonCompte.css';
+import Field from "./ProfilField"
 
 function MonCompte() {
     const [image, setImage] = useState(pp); // Image actuelle
@@ -68,66 +69,70 @@ function MonCompte() {
     };
 
     return (
-        <div>
+
+
+        <>
             <h1 className="name">Mon compte</h1>
+
             <div className="monCompte">
-    <div
-        className={`profile-pic ${cropping ? 'blocked' : ''}`}
-        style={{
-            backgroundImage: `url(${image})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-        }}
-    >
-        <input
-            type="file"
-            className="pp"
-            accept="image/*"
-            onChange={updateProfilePic}
-        />
-    </div>
-    {!cropping && (
-        <button
-            className="crop-button"
-            onClick={() => setCropping(true)}
-        >
-            Rogner la photo
-        </button>
-    )}
-    {cropping && (
-        <div className="crop-container">
-            <Cropper
-                image={image}
-                crop={crop}
-                zoom={zoom}
-                aspect={1} // Pour un carré
-                onCropChange={setCrop}
-                onZoomChange={setZoom}
-                onCropComplete={(croppedArea, croppedPixels) =>
-                    setCroppedAreaPixels(croppedPixels)
-                }
-            />
-            <div className="crop-buttons">
-                <button
-                    className="crop-button"
-                    onClick={handleCropComplete}
-                >
-                    Valider le rognage
-                </button>
-                <button
-                    className="crop-button cancel-button"
-                    onClick={() => setCropping(false)}
-                >
-                    Annuler
-                </button>
+
+
+                <div className="profile-pic-section">
+
+                    <div className={`profile-pic ${cropping ? 'blocked' : ''}`}  style={{backgroundImage: `url(${image})`, backgroundSize: 'cover', backgroundPosition: 'center', }}>
+                        <input type="file" className="pp" accept="image/*" onChange={updateProfilePic} />
+                    </div>
+
+                    {!cropping && (
+                        <button className="crop-button" onClick={() => setCropping(true)} > Rogner la photo </button>
+                    )}
+
+                </div>
+
+                {cropping && (
+                    <div className="crop-container">
+                        <Cropper
+                            image={image}
+                            crop={crop}
+                            zoom={zoom}
+                            aspect={1} // Pour un carré
+                            onCropChange={setCrop}
+                            onZoomChange={setZoom}
+                            onCropComplete={(croppedArea, croppedPixels) =>
+                                setCroppedAreaPixels(croppedPixels)
+                            }
+                        />
+                        <div className="crop-buttons">
+                            <button
+                                className="crop-button"
+                                onClick={handleCropComplete}
+                            >
+                                Valider le rognage
+                            </button>
+                            <button
+                                className="crop-button cancel-button"
+                                onClick={() => setCropping(false)}
+                            >
+                                Annuler
+                            </button>
+                        </div>
+                    </div>
+                )}
+                
+                <div className="fields">
+                    <Field label="Nom" text="Akhrib"/>
+                    <Field label="Prenom" text="Amine"/>
+                    <Field label="Email" text="amineakh2004@gmail.com"/>
+                    <Field label="Adresse" text="3 rue Jules Ferry"/>
+                    <br />
+                    
+                    
+                </div>
+
             </div>
-        </div>
-    )}
-</div>
 
-            
 
-        </div>
+        </>
     );
 }
 
