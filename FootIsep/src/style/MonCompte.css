@@ -1,0 +1,55 @@
+.monCompte {
+    margin: 30px;
+}
+
+.name {
+    margin: 20px;
+    font-size: 3rem;
+}
+
+.profile-pic {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+    border-radius: 0.2rem; /* Optionnel : pour une image circulaire */
+    overflow: hidden; /* Assure que rien ne dépasse du conteneur */
+    background-size: cover; /* Adapte l'image au conteneur */
+    background-position: center; /* Centre l'image */
+    transition: background 0.3s ease; /* Transition fluide pour le changement d'image */
+}
+
+.profile-pic .pp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Masque l'input natif */
+    z-index: 3;
+    cursor: pointer;
+}
+
+.profile-pic::after {
+    content: 'Changer de photo';
+    color: #fff;
+    display: flex; /* Utilisation de Flexbox */
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(128, 128, 128, 0.5); /* Couche grise semi-transparente */
+    opacity: 0; /* Invisible par défaut */
+    transition: opacity 0.3s ease; /* Transition fluide */
+    z-index: 2; /* Couche grise au-dessus de l'image mais sous l'input invisible */
+    pointer-events: none; /* Ne bloque pas les interactions avec l'input */
+}
+
+.profile-pic:hover::after {
+    opacity: 1; /* Affiche le texte et la couche grise au survol */
+}

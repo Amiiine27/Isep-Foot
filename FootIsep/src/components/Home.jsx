@@ -17,7 +17,7 @@ function Home() {
 
             <div className='next-match Aku'>
             
-                <h1 className='match-title'>Prochain match dans : <Timer targetDate="2025-01-01T00:00:00"/></h1>
+                <h1 className='match-title'>Prochain évenement dans : <Timer targetDate="2025-01-06T00:00:00"/></h1>
                 
                 <div className="sides">
 
