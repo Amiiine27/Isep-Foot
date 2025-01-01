@@ -1,7 +1,41 @@
     .monCompte {
         margin: 50px 100px 0 100px;
         display: flex;
+        justify-content: space-evenly;
+        gap: 80px;
+        flex-wrap: wrap; /* Permet de gérer le contenu sur plusieurs lignes si nécessaire */
     }
+
+    .save-button {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        width: 200px;
+        background-color: var(--light-color);
+        color: var(--bright-color);
+        font-size: 1.2rem;
+        height: 50px;
+        transition: opacity 0.3s ease, background-color 0.3s ease;
+        outline: none;
+        border: 2px solid transparent;
+        box-sizing: border-box;
+        user-select: none;
+        border-radius: 5px;
+    
+        /* Ajoutez ces lignes pour centrer */
+        position: relative;
+        left: 50%; /* Déplace au milieu */
+        transform: translateX(-50%); /* Ramène au centre exact */
+    }
+
+    
+    .save-button:hover {
+        background-color: var(--other-color);
+    }
+    
+    
 
     .name {
         margin: 20px;
@@ -66,7 +100,7 @@
     /* Conteneur des boutons */
     .crop-buttons {
         position: absolute;
-        top: calc(50% + 180px); /* Position sous le conteneur de rognage */
+        top: calc(65% + 180px); /* Position sous le conteneur de rognage */
         left: 50%;
         transform: translate(-50%, 0);
         display: flex;
@@ -118,11 +152,17 @@
 
 
 
-.fields{
+.infos{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 10px;
-    margin-left: 150px;
+    margin-left: 50px;
     height: 303px;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }

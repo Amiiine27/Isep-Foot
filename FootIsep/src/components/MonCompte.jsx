@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import Cropper from 'react-easy-crop';
 import pp from './../assets/toji.jpg';
 import './../style/MonCompte.css';
-import Field from "./ProfilField"
+import Field from "./ProfilField";
+import Stat from "./Stat"
 
 function MonCompte() {
     const [image, setImage] = useState(pp); // Image actuelle
@@ -119,7 +120,8 @@ function MonCompte() {
                     </div>
                 )}
                 
-                <div className="fields">
+                <div className="infos">
+                    <h1>Mes informations</h1>
                     <Field label="Nom" text="Akhrib"/>
                     <Field label="Prenom" text="Amine"/>
                     <Field label="Email" text="amineakh2004@gmail.com"/>
@@ -129,8 +131,21 @@ function MonCompte() {
                     
                 </div>
 
-            </div>
+                <div className="stats">
+                    <h1>Mes Statistiques</h1>
+                    <Stat label="Matchs disputés"  text="23" />
+                    <Stat label="Buts inscrits" text="10" />
+                    <Stat label="P.D délivrées" text="14" />
+                </div>
 
+                
+
+            </div>
+            
+            <div className="save-button">
+                <h4>Sauvegarder</h4>
+            </div>
+            
 
         </>
     );
